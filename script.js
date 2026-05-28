@@ -6,7 +6,7 @@
 let errorMap = {}; // Global dictionary object
 
 // ================== GOOGLE SHEETS CONFIG ==================
-const SHEET_CSV_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vRjXCQZmHCEOZpHxMHd0tYFnXl9kDxmIwTviWqMlLYi0lCgL3bG3EKpuaNTtxPMpYIt4DY-8uw3NtCV/pubhtml";
+const SHEET_CSV_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vRjXCQZmHCEOZpHxMHd0tYFnXl9kDxmIwTviWqMlLYi0lCgL3bG3EKpuaNTtxPMpYIt4DY-8uw3NtCV/pub?gid=0&single=true&output=csv";
 // Replace above with your actual published CSV link
 
 // Load dictionary from Google Sheets
