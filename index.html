@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="dz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>རྫོང་ཁའི་དངོས་མཐོང་སྡེབ་སྦྱོར་ཞིབ་དཔྱད།<br>Dzongkha Live Spelling Checker</title>
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Pro:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
+  
+  <!-- Link to CSS -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <div class="logo-mark">རྫོང་ཁ་ · Dzongkha</div>
+    <h1>རྫོང་ཁའི་དངོས་མཐོང་སྡེབ་སྦྱོར་ཞིབ་དཔྱད་འབད་ས།<br>Dzongkha Live Spelling Checker</h1>
+    <p class="subtitle">ཡི་གུའི་སྡེབ་དང་ཕྲད་ཀྱི་སྦྱོར་བ་ཚུ་བཅོ་ཁ་རྐྱབ་ཨིན།</p>
+    <div class="divider"></div>
+  </header>
+
+  <div class="app-container">
+    <!-- EDITOR PANEL -->
+    <div class="panel">
+      <div class="panel-header">
+        <div class="panel-dot"></div>
+        <div class="panel-title">Type Dzongkha Below</div>
+      </div>
+      <div class="editor-area">
+        <div class="placeholder-text" id="placeholder">ཡི་གུ་བྲིས་་་ · Start typing Dzongkha here…</div>
+        <div class="highlight-layer" id="highlightLayer" aria-hidden="true"></div>
+        <textarea id="inputArea" spellcheck="false" autocomplete="off"></textarea>
+      </div>
+      <div class="stats-bar">
+        <div class="stat">མིང་ཚིག། Words: <span class="stat-num gold" id="wordCount">0</span></div>
+        <div class="stat">འཛོལ་བ། Errors: <span class="stat-num red" id="errorCount">0</span></div>
+        <div class="stat">ཡིག་སྡེབ་དག་ཤོས།Correct: <span class="stat-num green" id="correctCount">0</span></div>
+      </div>
+    </div>
+
+    <!-- RULES REFERENCE -->
+    <div class="panel">
+      <div class="panel-header">
+        <div class="panel-dot"></div>
+        <div class="panel-title">ཡིག་སྡེབ་དང་སྦྱོར་བའི་འཛོལ་བ་དང་ནོར་བ།</div>
+      </div>
+      <div class="rules-grid" id="rulesGrid"></div>
+    </div>
+  </div>
+
+  <!-- POPUP -->
+  <div class="popup" id="popup">
+    <button class="popup-close" id="popupClose">✕</button>
+    <div class="popup-wrong" id="popupWrong"></div>
+    <div class="popup-arrow">→ Correct form:</div>
+    <div class="popup-correct" id="popupCorrect"></div>
+    <div class="popup-rule" id="popupRule"></div>
+  </div>
+
+  <!-- Link to JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
