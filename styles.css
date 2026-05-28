@@ -1,7 +1,7 @@
 /* ============== CUSTOM FONT ============== */
 @font-face {
   font-family: 'joyig';
-  src: url('joyig.ttf') format('truetype');
+  src: url('joyig.ttf') format('true-type');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
