@@ -199,3 +199,21 @@ textarea {
 @keyframes fadeDown { from { opacity: 0; transform: translateY(-16px); } to { opacity: 1; transform: translateY(0); } }
 @keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
 @keyframes popIn { from { opacity: 0; transform: scale(0.92); } to { opacity: 1; transform: scale(1); } }
+/* ============== CLICK-TO-FIX ============== */
+.popup-correct {
+  cursor: pointer;
+  border-radius: 6px;
+  padding: 4px 8px;
+  transition: background 0.15s;
+}
+.popup-correct:hover {
+  background: rgba(91,191,138,0.18);
+}
+.popup-correct::after {
+  content: ' ↵ tap to fix';
+  font-size: 11px;
+  color: var(--green);
+  opacity: 0.7;
+  font-family: 'Crimson Pro', serif;
+  font-style: italic;
+}
