@@ -1,7 +1,7 @@
 /* ============== CUSTOM FONT ============== */
 @font-face {
-  font-family: 'joyig';
-  src: url('joyig.ttf') format('true-type');
+  font-family: 'ThinWangT_Joyig';
+  src: url('./ThinWangT_Joyig.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -54,16 +54,18 @@ h1 { font-family: 'Cinzel', serif; font-size: clamp(22px, 4vw, 36px); font-weigh
 .panel-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--gold); box-shadow: 0 0 8px var(--gold); }
 .panel-title { font-family: 'Cinzel', serif; font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); }
 
-/* Editor Area */
-.editor-area { position: relative; padding: 24px; }
-
+/* ============== CUSTOM FONT APPLICATION ============== */
 textarea,
 .highlight-layer,
 .rule-example,
 .popup-wrong,
-.popup-correct {
-  font-family: 'joyig', 'Noto Serif', 'Jomolhari', serif;
+.popup-correct,
+.placeholder-text {
+  font-family: 'ThinWangT_Joyig', 'Noto Serif', 'Jomolhari', serif !important;
 }
+
+/* Editor Area */
+.editor-area { position: relative; padding: 24px; }
 
 textarea {
   width: 100%;
@@ -73,8 +75,8 @@ textarea {
   outline: none;
   color: transparent;
   caret-color: var(--gold-light);
-  font-size: 23px;
-  line-height: 1.9;
+  font-size: 24px;           /* Slightly bigger for better visibility */
+  line-height: 1.95;
   resize: vertical;
   z-index: 2;
 }
@@ -82,8 +84,8 @@ textarea {
 .highlight-layer {
   position: absolute;
   top: 24px; left: 24px; right: 24px;
-  font-size: 23px;
-  line-height: 1.9;
+  font-size: 24px;
+  line-height: 1.95;
   color: var(--text);
   pointer-events: none;
   white-space: pre-wrap;
@@ -92,6 +94,7 @@ textarea {
   min-height: 160px;
 }
 
+/* Rest of your styles (same as before) */
 .highlight-layer .error-word {
   border-bottom: 2.5px solid var(--red);
   background: var(--red-glow);
@@ -199,21 +202,3 @@ textarea {
 @keyframes fadeDown { from { opacity: 0; transform: translateY(-16px); } to { opacity: 1; transform: translateY(0); } }
 @keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
 @keyframes popIn { from { opacity: 0; transform: scale(0.92); } to { opacity: 1; transform: scale(1); } }
-/* ============== CLICK-TO-FIX ============== */
-.popup-correct {
-  cursor: pointer;
-  border-radius: 6px;
-  padding: 4px 8px;
-  transition: background 0.15s;
-}
-.popup-correct:hover {
-  background: rgba(91,191,138,0.18);
-}
-.popup-correct::after {
-  content: ' ↵ tap to fix';
-  font-size: 11px;
-  color: var(--green);
-  opacity: 0.7;
-  font-family: 'Crimson Pro', serif;
-  font-style: italic;
-}
